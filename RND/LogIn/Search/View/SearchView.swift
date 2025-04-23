@@ -33,7 +33,7 @@ struct SearchView: View {
             
             List(viewModel.results.prefix(10)) { med in
                 NavigationLink {
-                    coordinator.build(.detail)
+                    coordinator.build(.detail(medication: med))
                 } label: {
                     ItemCell(medication: med)
                     

@@ -21,12 +21,12 @@ protocol AppCoordinatorProtocol: ObservableObject {
 }
 
 enum Screen: Identifiable, Hashable {
-    
+    case medicationList
     case onboard
     case login
     case signup
-    case detail
-    case medicationList
+    case detail(medication: ConceptProperty)
+    
     var id: Self { return self }
 }
 

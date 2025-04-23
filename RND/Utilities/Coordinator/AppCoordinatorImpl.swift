@@ -54,9 +54,8 @@ class AppCoordinatorImpl: AppCoordinatorProtocol {
             OnboardingView()
         case .medicationList:
             MyMedicationsView()
-        case .detail:
-            EmptyView()
-        
+        case .detail(medication: let medication):
+            MedicationDetailView(medication: medication, viewModel: MyMedicationsViewModel())
         }
     }
     
