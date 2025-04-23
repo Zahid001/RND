@@ -25,13 +25,13 @@ enum Screen: Identifiable, Hashable {
     case onboard
     case login
     case signup
-    
-    
+    case detail
+    case medicationList
     var id: Self { return self }
 }
 
 enum Sheet: Identifiable, Hashable {
-    case none
+    case search
     
     var id: Self { return self }
 }

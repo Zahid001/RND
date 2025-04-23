@@ -52,13 +52,22 @@ class AppCoordinatorImpl: AppCoordinatorProtocol {
             SignUpView()
         case .onboard:
             OnboardingView()
+        case .medicationList:
+            MyMedicationsView()
+        case .detail:
+            EmptyView()
         
         }
     }
     
     @ViewBuilder
     func build(_ sheet: Sheet) -> some View {
-        
+        switch sheet {
+        case .search:
+            NavigationStack{
+                SearchView()
+            }
+        }
     }
     
     @ViewBuilder

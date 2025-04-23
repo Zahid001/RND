@@ -31,7 +31,7 @@ struct CoordinatorView: View {
     @ViewBuilder
     private func initialScreen() -> some View {
         if authViewModel.firebaseUser != nil {
-            
+            appCoordinator.build(.medicationList)
         } else {
             appCoordinator.build(.onboard)
         }
