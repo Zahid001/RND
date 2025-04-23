@@ -17,7 +17,7 @@ struct RNDApp: App {
     
     var body: some Scene {
         WindowGroup {
-            EmptyView()
+            CoordinatorView()
         }
     }
 }
